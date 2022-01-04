@@ -1,0 +1,21 @@
+# If you want electrum to appear in a linux app launcher ("start menu"), install this by doing:
+# sudo desktop-file-install electrum-stak.desktop
+
+[Desktop Entry]
+Comment=Lightweight STRAKS Client
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\" electrum-stak %u"
+GenericName[en_US]=STRAKS Wallet
+GenericName=STRAKS Wallet
+Icon=electrum-stak
+Name[en_US]=Electrum STRAKS Wallet
+Name=Electrum STRAKS Wallet
+Categories=Finance;Network;
+StartupNotify=false
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/straks;
+Actions=Testnet;
+
+[Desktop Action Testnet]
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\" electrum-stak --testnet %u"
+Name=Testnet mode
